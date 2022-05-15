@@ -405,7 +405,6 @@ public class GameControl : MonoBehaviour
     public void pressAButton()
     {
         GameObject aBlock = Instantiate(Resources.Load("Prefabs/Letters/a")) as GameObject;
-        //aBlock.transform.SetParent(A4);
         setParent1(aBlock);
     }
     public void pressBButton()
@@ -471,67 +470,67 @@ public class GameControl : MonoBehaviour
     public void pressNButton()
     {
         GameObject nBlock = Instantiate(Resources.Load("Prefabs/Letters/n")) as GameObject;
-        setParent2(nBlock);
+        setParent1(nBlock);
     }
     public void pressOButton()
     {
         GameObject oBlock = Instantiate(Resources.Load("Prefabs/Letters/o")) as GameObject;
-        setParent2(oBlock);
+        setParent1(oBlock);
     }
     public void pressPButton()
     {
         GameObject pBlock = Instantiate(Resources.Load("Prefabs/Letters/p")) as GameObject;
-        setParent2(pBlock);
+        setParent1(pBlock);
     }
     public void pressQButton()
     {
         GameObject qBlock = Instantiate(Resources.Load("Prefabs/Letters/q")) as GameObject;
-        setParent2(qBlock);
+        setParent1(qBlock);
     }
     public void pressRButton()
     {
         GameObject rBlock = Instantiate(Resources.Load("Prefabs/Letters/r")) as GameObject;
-        setParent2(rBlock);
+        setParent1(rBlock);
     }
     public void pressSButton()
     {
         GameObject sBlock = Instantiate(Resources.Load("Prefabs/Letters/s")) as GameObject;
-        setParent2(sBlock);
+        setParent1(sBlock);
     }
     public void pressTButton()
     {
         GameObject tBlock = Instantiate(Resources.Load("Prefabs/Letters/t")) as GameObject;
-        setParent2(tBlock);
+        setParent1(tBlock);
     }
     public void pressUButton()
     {
         GameObject uBlock = Instantiate(Resources.Load("Prefabs/Letters/u")) as GameObject;
-        setParent2(uBlock);
+        setParent1(uBlock);
     }
     public void pressVButton()
     {
         GameObject vBlock = Instantiate(Resources.Load("Prefabs/Letters/v")) as GameObject;
-        setParent2(vBlock);
+        setParent1(vBlock);
     }
     public void pressWButton()
     {
         GameObject wBlock = Instantiate(Resources.Load("Prefabs/Letters/w")) as GameObject;
-        setParent2(wBlock);
+        setParent1(wBlock);
     }
     public void pressXButton()
     {
         GameObject xBlock = Instantiate(Resources.Load("Prefabs/Letters/x")) as GameObject;
-        setParent2(xBlock);
+        setParent1(xBlock);
     }
     public void pressYButton()
     {
         GameObject yBlock = Instantiate(Resources.Load("Prefabs/Letters/y")) as GameObject;
-        setParent2(yBlock);
+        setParent1(yBlock);
     }
     public void pressZButton()
     {
         GameObject zBlock = Instantiate(Resources.Load("Prefabs/Letters/z")) as GameObject;
-        setParent2(zBlock);
+        setParent1(zBlock);
     }
 
 
@@ -582,7 +581,7 @@ public class GameControl : MonoBehaviour
         {
             if (Row1[h].childCount == 0)
             {
-                block.transform.SetParent(Row1[h]);
+                block.transform.SetParent(Row1[h], false);
                 break;
             }
             else
@@ -592,21 +591,21 @@ public class GameControl : MonoBehaviour
         }
     }
 
-    private void setParent2(GameObject block)
-    {
-        for (int h = 7; h < Row1.Count; h--)
-        {
-            if (Row1[h].childCount == 0)
-            {
-                block.transform.SetParent(Row1[h]);
-                break;
-            }
-            else
-            {
-                continue;
-            }
-        }
-    }
+    //private void setParent2(GameObject block)
+    //{
+    //    for (int h = 7; h < Row1.Count; h--)
+    //    {
+    //        if (Row1[h].childCount == 0)
+    //        {
+    //            block.transform.SetParent(Row1[h]);
+    //            break;
+    //        }
+    //        else
+    //        {
+    //            continue;
+    //        }
+    //    }
+    //}
 
 
     public void MoveRight()
